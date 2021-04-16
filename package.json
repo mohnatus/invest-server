@@ -1,0 +1,24 @@
+{
+  "name": "invest-server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "watch": "parcel src/index.html"
+  },
+  "dependencies": {
+    "@tinkoff/invest-openapi-js-sdk": "^1.2.17",
+    "cookie-parser": "~1.4.4",
+    "core-js": "^3.10.1",
+    "debug": "~2.6.9",
+    "event-emitter": "^0.3.5",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1",
+    "regenerator-runtime": "^0.13.7"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
