@@ -10,11 +10,15 @@ const socketURL = 'wss://api-invest.tinkoff.ru/openapi/md/v1/md-openapi/ws';
 const api = new OpenAPI({ apiURL, secretToken: token, socketURL });
 
 if (account) {
-  api.setCurrentAccountId(account);
+	api.setCurrentAccountId(account);
 } else {
-  api.accounts().then(data => console.log(data));
+	api.accounts().then((data) => console.log(data));
 }
 
 module.exports.getPortfolio = () => {
-  return api.portfolio();
+	return api.portfolio();
 };
+
+module.exports.getBalance = () => {
+  return api.portfolioCurrencies();
+}
