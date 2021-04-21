@@ -11,6 +11,8 @@ const api = new OpenAPI({ apiURL, secretToken: token, socketURL });
 
 if (account) {
   api.setCurrentAccountId(account);
+} else {
+  api.accounts().then(data => console.log(data));
 }
 
 module.exports.getPortfolio = () => {
