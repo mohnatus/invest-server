@@ -22,3 +22,7 @@ module.exports.getPortfolio = () => {
 module.exports.getBalance = () => {
   return api.portfolioCurrencies();
 }
+
+module.exports.getEtfs = () => {
+  return api.etfs();
+}

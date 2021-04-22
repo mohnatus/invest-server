@@ -9,6 +9,7 @@ var portfolioRouter = require('./routes/portfolio');
 var compositionRouter = require('./routes/composition');
 var balanceRouter = require('./routes/balance');
 var buyRouter = require('./routes/buy');
+var etfsRouter = require('./routes/etfs');
 
 var app = express();
 
@@ -26,6 +27,7 @@ app.use('/portfolio', portfolioRouter);
 app.use('/composition', compositionRouter);
 app.use('/balance', balanceRouter);
 app.use('/buy', buyRouter);
+app.use('/etfs', etfsRouter);
 
 app.use(function(req, res, next) {
   next(createError(404));
