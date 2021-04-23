@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
 
-const { getPortfolio } = require('../api');
+const { getEtfs } = require('../api');
 
 router.get('/', function (req, res, next) {
-  return getPortfolio()
+  return getEtfs()
     .then((data) => {
       return res.json({
-        portfolio: data
+        etfs: data
       });
     })
     .catch((response) => {

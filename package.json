@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@tinkoff/invest-openapi-js-sdk": "^1.2.17",
+    "body-parser": "^1.19.0",
     "cookie-parser": "~1.4.4",
     "core-js": "^3.10.1",
     "debug": "~2.6.9",
@@ -15,6 +16,7 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
+    "mongodb": "^3.6.6",
     "morgan": "~1.9.1",
     "regenerator-runtime": "^0.13.7"
   },

@@ -10,11 +10,18 @@ var compositionRouter = require('./routes/composition');
 var balanceRouter = require('./routes/balance');
 var buyRouter = require('./routes/buy');
 var etfsRouter = require('./routes/etfs');
+var tinkoffEtfsRouter = require('./routes/tinkoff-etfs');
 
 var app = express();
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -28,6 +35,7 @@ app.use('/composition', compositionRouter);
 app.use('/balance', balanceRouter);
 app.use('/buy', buyRouter);
 app.use('/etfs', etfsRouter);
+app.use('/tinkoff-etfs', tinkoffEtfsRouter);
 
 app.use(function(req, res, next) {
   next(createError(404));
